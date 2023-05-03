@@ -6,7 +6,7 @@ var livrosTerror = [
       "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
     preco: 22.9,
     pictureURL:
-      "/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ var livrosTerror = [
       "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
     preco: 22.9,
     pictureURL:
-      "/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ var livrosTerror = [
       "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
     preco: 22.9,
     pictureURL:
-      "/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ var livrosTerror = [
       "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
     preco: 22.9,
     pictureURL:
-      "/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ var livrosTerror = [
       "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
     preco: 22.9,
     pictureURL:
-      "/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ var livrosTerror = [
       "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
     preco: 22.9,
     pictureURL:
-      "/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
   },
 ];
 
