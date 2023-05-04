@@ -20,44 +20,47 @@
             </div>
             <div class="banner">
                 <div class="titulo">
-                    <h1>Livraria muito daora</h1>
+                    <h1>Palavra Magica</h1>
                 </div>
-
                 <div class="search">
                     <input type="text" class="searchTerm" placeholder="O que tu ta procurando?" autocomplete="off">
-                    <button type="submit" class="searchButton"> <img class="botao" src="/inputs/search.png" width='20px'
-                            alt="pesquisar" />
-                    </button>
+                    <input type="submit" class="searchButton" value="Procurar">
                     <div id="sugestoes" hidden></div>
                 </div>
-                <div class="carrinho"> <button> <img class="carrinho"
+                <div class="carrinho"> <button onclick="toggleShopCart()"> <img class="carrinhoImagem"
                             src="inputs/png-transparent-shopping-cart-graphy-shopping-cart-furniture-rectangle-supermarket.png"
                             width="50px">
                     </button>
+                    <div class="listaCompras" hidden>
+
+                    </div>
+                    <div class="shopping">
+                        <h3>Total: R$</h3>
+                    </div>
                 </div>
             </div>
             <div class="headerBotton">
-                <button id="home">Principal</button>
-                <button id="terror">Terror</button>
-                <button>Ação</button>
-                <button>Manga</button>
-                <button>Romance</button>
-                <button>Fantasia</button>
+                <button id="home" class="button">Principal</button>
+                <button id="terror" class="button">Terror</button>
+                <button id="acao" class="button">Ação</button>
+                <button id="manga" class="button">Manga</button>
+                <button id="romance" class="button">Romance</button>
+                <button id="fantasia" class="button">Fantasia</button>
             </div>
         </header>
         <main>
-            <div class="art">
-                <img class='artcentral' src="inputs/biblioteca-universitaria.jpg">
-                <div class="central">
-                    <h1>Livraria daora</h1>
-                </div>
+            <div class="titleImage">
+                <h1 class="siteTitle"> PALAVRA MAGICA</h1>
+                <!-- <img src="/inputs/ea7b101831f1e760a021b21d94c6c990.png"> -->
+                <samp>"Onde seus desejos se tornam realidade"</samp>
+
             </div>
             <div class="livros">
             </div>
         </main>
     </div>
     <footer class="footer">
-        © Copyright Livraria daora
+        © Copyright Palavra Magia
     </footer>
 
 </body>

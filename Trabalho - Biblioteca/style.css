@@ -16,7 +16,7 @@ body {
   justify-content: start;
   align-items: center;
   text-align: center;
-  background-color: lightgreen;
+  background-color: black;
 }
 
 .terror {
@@ -33,9 +33,10 @@ body {
 .headerTop {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 200px;
+  justify-content: space-between;
   background-color: antiquewhite;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .banner {
@@ -43,36 +44,94 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 500px;
   background-color: lightblue;
+  gap: 10px;
 }
 
+.titulo {
+  margin-left: auto;
+}
 .search {
   display: flex;
 }
 
+.login {
+  margin-left: auto;
+}
+
+.carrinho {
+  margin-right: auto;
+}
+
+.listaCompras {
+  background-color: rgb(187, 11, 11);
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 5px;
+  z-index: 99999;
+  position: absolute;
+  margin-right: auto;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.shopping {
+  position: absolute;
+  top: 28px;
+}
+
 .searchTerm {
-  border: 3px solid #00b4cc;
+  border: 2px solid #00b4cc;
   border-right: none;
   padding: 5px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
+  overflow: auto;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   outline: none;
-  color: #00b661;
   position: relative;
+  width: 500px;
+}
+
+.searchTerm input[type="text"] {
+  border: 0px;
+  width: 67%;
+  padding: 10px 10px;
+}
+
+.search input[type="submit"] {
+  border: 2px;
+  border-radius: 5px;
+  border-left: none;
+  background: none;
+  background-color: #00b4cc;
+  color: #fff;
+  float: right;
+  padding: 10px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  cursor: pointer;
 }
 
 #sugestoes {
   background-color: lightblue;
   height: auto;
-  width: 183px;
+  width: 500px;
   position: absolute;
-  top: 104px;
+  top: 105px;
   padding: 5px;
   display: none;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   gap: 5px;
+  z-index: 99999;
 }
 
 .preview {
@@ -89,9 +148,18 @@ body {
 
 .headerBotton {
   display: flex;
-  justify-content: center;
-  gap: 200px;
+  justify-content: space-around;
   background-color: azure;
+}
+
+.button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 main {
@@ -101,51 +169,92 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-image: url(/inputs/Magic-ball-library-books_3840x2160.jpg);
+  background-size: cover;
+}
+
+.titleImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .livros {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 150px;
-  grid-row-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .livro {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
+  justify-content: start;
   border: #00b4cc 2px solid;
   margin: 20px;
+  max-width: 300px;
+  max-height: fit-content;
+  background-color: aqua;
 }
 
 .livro img {
   width: 200px;
 }
 
-.botao {
+.livro h2 {
   margin: 0%;
 }
 
-.carrinho {
-  margin: 0%;
+.livro #bookName {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
 }
 
+.livro #resume {
+  width: 100%;
+  height: 100%;
+}
+.livro #shopButton {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+}
+
+.livro #bookPrice {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
 .footer {
   width: 100%;
   flex-shrink: 0;
   background-color: blue;
 }
-
-.art {
-  position: relative;
-  text-align: center;
-}
-
-.central {
-  color: red;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media only screen and (min-width: 150px) and (max-width: 780px) {
+  .searchTerm {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #sugestoes {
+    background-color: lightblue;
+    height: auto;
+    width: 89px;
+    position: absolute;
+    top: 105px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+    z-index: 99999;
+  }
 }

@@ -1,9 +1,14 @@
+const cartItemsEl = document.querySelector(".listaCompras");
+const subTotalEl = document.querySelector(".shopping");
+let listaCompra = JSON.parse(localStorage.getItem("CART")) || [];
+updateCart();
+
 var livrosTerror = [
   {
     id: 1,
-    name: "Livro muito assustador bu",
+    name: "Livro",
     sumario:
-      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
+      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu bu bu bu",
     preco: 22.9,
     pictureURL:
       "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
@@ -53,6 +58,18 @@ var livrosTerror = [
     pictureURL:
       "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
   },
+
+  (livrosAcao = [
+    {
+      id: 7,
+      name: "Livro",
+      sumario:
+        "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu bu bu bu",
+      preco: 22.9,
+      pictureURL:
+        "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    },
+  ]),
 ];
 
 document.querySelector(".searchButton").addEventListener("click", (e) => {
@@ -62,11 +79,15 @@ document.querySelector(".searchButton").addEventListener("click", (e) => {
 
 document.querySelector("#terror").addEventListener("click", (e) => {
   e.preventDefault();
+  document.querySelector("#terror").setAttribute("disabled", true);
+  document.querySelector("#home").removeAttribute("disabled");
   buttonTerror();
 });
 
 document.querySelector("#home").addEventListener("click", (e) => {
   e.preventDefault();
+  document.querySelector("#home").setAttribute("disabled", true);
+  document.querySelector("#terror").removeAttribute("disabled");
   buttonHome();
 });
 
@@ -77,11 +98,11 @@ const buttonTerror = () => {
 
   livrosTerror.forEach((livro) => {
     htmlString += `<div class="livro">
-      <img src="${livro.pictureURL}">
-      <h2 class="name">${livro.name}</h2>
-      <p class="preco">R$ ${livro.preco}</p>
-      <span class="sumario">${livro.sumario}</span>
-      <button class="shop">Comprar</button>
+      <div id="imagemLivro"><img src="${livro.pictureURL}"></div>
+      <div id="bookName"><h2 class="name">${livro.name}</h2></div>
+      <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
+      <div id="resume"><span class="sumario">${livro.sumario}</span></div>
+      <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
     </div>`;
   });
 
@@ -130,11 +151,11 @@ const searchBook = () => {
   if (filteredBooks.length > 0) {
     filteredBooks.forEach((livro) => {
       htmlString += `<div class="livro">
-      <img src="${livro.pictureURL}">
-      <h2 class="name">${livro.name}</h2>
-      <p class="preco">R$ ${livro.preco}</p>
-      <span class="sumario">${livro.sumario}</span>
-      <button class="shop">Comprar</button>
+      <div id="imagemLivro"><img src="${livro.pictureURL}"></div>
+      <div id="bookName"><h2 class="name">${livro.name}</h2></div>
+      <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
+      <div id="resume"><span class="sumario">${livro.sumario}</span></div>
+      <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
     </div>`;
     });
   } else {
@@ -143,6 +164,7 @@ const searchBook = () => {
 
   document.querySelector(".livros").innerHTML = htmlString;
   document.querySelector(".searchTerm").value = "";
+  closeSuggestions();
 };
 
 const buttonHome = () => {
@@ -152,3 +174,84 @@ const buttonHome = () => {
 
   document.querySelector(".livros").innerHTML = htmlString;
 };
+
+function toggleShopCart() {
+  if (document.querySelector(".listaCompras").style.display == "none") {
+    document.querySelector(".listaCompras").style.display = "flex";
+  } else {
+    document.querySelector(".listaCompras").style.display = "none";
+  }
+}
+
+function addToCart(id) {
+  if (listaCompra.some((item) => item.id === id)) {
+    changeNumberOfUnits("plus", id);
+  } else {
+    const item = livrosTerror.find((livro) => livro.id === id);
+
+    listaCompra.push({
+      ...item,
+      numberOfUnits: 1,
+    });
+  }
+
+  updateCart();
+}
+
+function updateCart() {
+  renderCartItems();
+  renderSubTotal();
+
+  localStorage.setItem("CART", JSON.stringify(listaCompra));
+}
+
+function renderSubTotal() {
+  let totalPrice = 0;
+  let totalItems = 0;
+
+  listaCompra.forEach((item) => {
+    totalPrice += item.preco * item.numberOfUnits;
+    totalItems += item.numberOfUnits;
+  });
+
+  subTotalEl.innerHTML = `<h3>Total: R$ ${totalPrice.toFixed(2)}</h3>`;
+}
+
+function renderCartItems() {
+  cartItemsEl.innerHTML = "";
+  listaCompra.forEach((item) => {
+    cartItemsEl.innerHTML += `<div class='renderCart'><img src='${item.pictureURL}' width='20px'>
+    <span class='livroSuggestion'>${item.name}</span> 
+    <div id="bookPrice"><p class="preco">R$ ${item.preco}</p></div> 
+    <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+    <div class="numberOfUnits">${item.numberOfUnits}</div>
+    <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>
+    <div class="btnRemove" onclick="removeItemFromCart(${item.id})">Remove</div>
+    </div>`;
+  });
+}
+
+function removeItemFromCart(id) {
+  listaCompra = listaCompra.filter((item) => item.id !== id);
+
+  updateCart();
+}
+
+function changeNumberOfUnits(action, id) {
+  listaCompra = listaCompra.map((item) => {
+    let numberOfUnits = item.numberOfUnits;
+    if (item.id === id) {
+      if (action === "minus" && numberOfUnits > 1) {
+        numberOfUnits--;
+      } else if (action === "plus") {
+        numberOfUnits++;
+      }
+    }
+    return {
+      ...item,
+      numberOfUnits,
+    };
+  });
+
+  updateCart();
+}
