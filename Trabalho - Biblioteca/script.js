@@ -81,6 +81,72 @@ var livros = [
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "acao",
   },
+  {
+    id: 14,
+    name: "Não há super-herois",
+    sumario:
+      "Em 2022 um ataque terrorista aconteceu na Europa chocando o mundo todo. Com medo de que algo desse tipo possa acontecer de novo, os presidentes de grandes nações se unem para descobrir quem está por trás disso sem saber que o inimigo está mais próximo que eles imaginam...",
+    preco: 22.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "acao",
+  },
+  {
+    id: 15,
+    name: "Cemitério dos perdedores é silencioso",
+    sumario:
+      "O inimigo número 1 do FBI volta a ativa depois de anos sem ninguém saber onde ele estava se escondendo. Esse livro conta a história de como o FBI realizou a operação que foi atrás do homem mais procurado da história do mundo policial.",
+    preco: 22.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "acao",
+  },
+  {
+    id: 16,
+    name: "O sangue revela tudo",
+    sumario:
+      "Em 1976 as nações entraram em guerra e soldados foram convocados de ambos os lados para o campo de batalha. Um soldado se destaca quando suas habilidades de matança aflorescem, será que ele vai conseguir se livrar da iminente emboscada que o inimigo prepara?",
+    preco: 22.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "acao",
+  },
+  {
+    id: 17,
+    name: "Em busca da arma perdida",
+    sumario:
+      "Tendo vivenciado o assassinato do seu pai quando criança, Edgar Phoenix vai atrás do assassino quando ve o revólver que foi roubado do seu pai naquela mesma noite.",
+    preco: 22.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "acao",
+  },
+  {
+    id: 18,
+    name: "O mundo não é amistoso",
+    sumario:
+      "Dustin Peralta foi criado pelo seu pai, um impiedoso Coronel, e com ele aprendeu as mais variadas táticas sobre como vencer uma guerra. Agora com a morte de seu pai cabe a ele guiar o grande exército em busca de conquistar novas terras.",
+    preco: 22.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "acao",
+  },
+  {
+    id: 19,
+    name: "Hasta la vista, Baby",
+    sumario:
+      "Ameaçado de morte pela temida máfia japonesa, Humberto tem que juntar seu antigos amigos de golpe para roubar um banco e sanar sua dívida.",
+    preco: 22.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "acao",
+  },
 ];
 
 document.querySelector(".searchButton").addEventListener("click", (e) => {
