@@ -81,6 +81,77 @@ var livros = [
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "acao",
   },
+  {
+    id: 8,
+    name: "Dragao negro albino",
+    sumario:
+      "Fumaça é um dragão negro albino com a habilidade de cuspir fogo negro durante o dia e raio azul à noite. Ele é o protetor de uma pequena vila de aldeões bondosos que o acolheram e protegeram.",
+    preco: 199.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "fantasia",
+  },
+  {
+    id: 9,
+    name: "Eryndor, o exilado",
+    sumario:
+      "Eryndor, um jovem fascinado pela magia, é treinado por um feiticeiro mal e descobre seus verdadeiros planos. Depois de anos isolado, ele retorna para enfrentar seu antigo mentor e proteger a floresta onde cresceu.",
+    preco: 99.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "fantasia",
+  },
+  {
+    id: 10,
+    name: "Mundo de Eldoria",
+    sumario:
+      "Em um mundo de fantasia chamado Eldoria, o herói Kael lidera a luta contra demônios liderados pelo senhor das trevas Zathar. Com a ajuda dos guerreiros de Eldoria e aliados dragões, eles enfrentam uma batalha épica para restaurar a paz.",
+      
+    preco: 59.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "fantasia",
+  },
+  {
+    id: 11,
+    name: "A Jornada da inocência",
+    sumario:
+      "Em Runeterra, a rainha elfa Illyria é acusada injustamente de assassinar o rei humano. Com a ajuda do jovem Finn, ela começa uma jornada para provar sua inocência enquanto enfrenta perigos e conspirações.",
+      
+    preco: 49.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "fantasia",
+  },
+  {
+    id: 12,
+    name: "Alan, o aventureiro",
+    sumario:
+      "Alan, um jovem aventureiro, descobre uma porta mágica que o leva para um mundo repleto de magia e fantasia. Ele viaja por diferentes mundos, vivendo aventuras incríveis e conhecendo novos amigos.",
+      
+    preco: 29.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "fantasia",
+  },
+  {
+    id: 13,
+    name: "O Filho da União proibida",
+    sumario:
+      "Em um mundo dividido em duas nações, fogo e água, o nascido de um manipulador do fogo e uma manipuladora de água, Kira. O fruto de uma união proibida, treinado pelo poderoso macaco e seus pais.",
+      
+    preco: 99.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "fantasia",
+  },
+
 ];
 
 document.querySelector(".searchButton").addEventListener("click", (e) => {
