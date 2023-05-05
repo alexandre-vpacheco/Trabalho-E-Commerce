@@ -36,7 +36,19 @@ body {
   height: 80px;
 }
 
-.titulo {
+.menuNaive {
+  display: none;
+}
+
+.menu-line {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 4px;
+}
+
+.titleImage img {
+  width: 76px;
 }
 .search {
   display: flex;
@@ -46,6 +58,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 
 .carrinho .carrinhoButton {
@@ -68,24 +81,59 @@ h3 {
   margin: 0;
 }
 
-.listaCompras {
+.Compras {
   background-color: rgb(187, 11, 11);
   padding: 5px;
   display: none;
-  flex-direction: row;
+  flex-direction: column;
   align-items: start;
   justify-content: start;
   gap: 5px;
   z-index: 99999;
   position: absolute;
-  top: 61px;
-  width: fit-content;
+  top: 45px;
+  min-width: 391px;
+  right: -173px;
+}
+
+.renderCart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+  padding: 2px;
+  gap: 7px;
+}
+
+.livroSuggestion {
+}
+
+.identificator {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.shoppingAll {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+
+  min-width: 391px;
 }
 
 .shopping {
-  display: flex;
 }
 
+.endShopping {
+}
+
+.search {
+  position: relative;
+}
 .searchTerm {
   border: 2px solid -webkit-linear-gradient(rgb(107, 58, 1), rgb(34, 83, 1));
   border-right: none;
@@ -94,13 +142,8 @@ h3 {
   outline: none;
   position: relative;
   width: 500px;
+  z-index: 9999999;
 }
-
-/* .searchTerm input[type="text"] {
-  border: 0px;
-  width: 67%;
-  padding: 10px 10px;
-} */
 
 .search input[type="submit"] {
   border: 2px;
@@ -117,14 +160,14 @@ h3 {
   background-color: #3c4749;
   width: 500px;
   position: absolute;
-  top: 58px;
+  top: 39px;
   padding: 5px;
   display: none;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   gap: 5px;
-  z-index: 99999;
+  z-index: 999999;
 }
 
 .preview {
@@ -171,15 +214,17 @@ main {
   background-image: url(/inputs/horror-pumpkins-halloween_1574941038.jpg);
 }
 
-.siteTitle {
+.backGround {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
+}
 
-  font-size: 72px;
+.backGroundImage img {
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 50%;
   background: -webkit-linear-gradient(rgb(107, 58, 1), rgb(34, 83, 1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .livros {
@@ -252,30 +297,107 @@ main {
   flex-shrink: 0;
   background: -webkit-linear-gradient(rgb(34, 83, 1), rgb(107, 58, 1));
 }
-@media only screen and (min-width: 150px) and (max-width: 1016px) {
+
+@media all and (max-width: 1265px) {
+  .carrinhoImagem {
+    display: none;
+  }
+
+  .titulo {
+    position: relative;
+  }
+  .menuNaive {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 223px;
+  }
+  .Compras {
+    display: flex;
+    top: 22px;
+    min-width: 391px;
+    right: 438px;
+  }
+
+  #sugestoes {
+    top: 39px;
+  }
+}
+@media only screen and (min-width: 140px) and (max-width: 1016px) {
   .searchTerm {
     width: 95%;
   }
   #sugestoes {
-    width: 27%;
-    top: 58px;
+    width: 182px;
+    top: 39px;
+    align-items: center;
   }
 
   .livroSuggestion {
     display: none;
   }
+
+  .Compras {
+    display: flex;
+    top: 22px;
+    min-width: 391px;
+    right: 119px;
+  }
+  .preview img {
+    width: 150px;
+  }
 }
 @media only screen and (min-width: 150px) and (max-width: 664px) {
   .searchTerm {
-    display: none;
+    position: absolute;
+    right: 56px;
+    top: 18px;
+    width: 200px;
   }
   #sugestoes {
-    display: none;
+    position: absolute;
+    right: 55px;
+    top: 47px;
+    width: 200px;
   }
   .search input[type="submit"] {
     display: none;
   }
-  .carrinho {
+  .Compras {
+    display: flex;
+    top: 48px;
+    right: -4px;
+    min-width: fit-content;
+    align-items: center;
+  }
+
+  .headerBotton {
     display: none;
+  }
+
+  .livroNames {
+    display: none;
+  }
+
+  .shoppingAll {
+    justify-content: center;
+    min-width: 251px;
+    gap: 5px;
+  }
+
+  .identificator {
+    display: none;
+  }
+
+  .renderCart img {
+    width: 30px;
+  }
+
+  .preview img {
+    width: 150px;
+  }
+
+  .banner {
+    gap: 0;
   }
 }

@@ -13,6 +13,7 @@ var livros = [
     pictureURL: "/inputs/terrorNaOrlaDosCaranguejos.png",
     href: "http://127.0.0.1:5500/inputs/terrorNaOrlaDosCaranguejos.png",
     categoria: "terror",
+    pdf: "/inputs/terror.txt",
   },
   {
     id: 2,
@@ -84,6 +85,7 @@ var livros = [
 
 document.querySelector(".searchButton").addEventListener("click", (e) => {
   e.preventDefault();
+  document.querySelector(".searchButton").setAttribute("disabled", true);
   searchBook();
 });
 
@@ -149,7 +151,7 @@ const buttonTerror = () => {
     <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
     <div id="resume"><span class="sumario">${livro.sumario}</span></div>
     <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
-    </div>`;
+    </div><div id="pdf" hidden>${livro.pdf}</div>`;
   });
 
   document.querySelector("main").className = "terror";
@@ -234,7 +236,9 @@ const buttonRomance = () => {
 };
 
 document.querySelector(".searchTerm").addEventListener("input", (e) => {
+  document.querySelector(".searchButton").setAttribute("disabled", true);
   if (e.target.value.length >= 2) {
+    document.querySelector(".searchButton").removeAttribute("disabled");
     handleSuggestions(e.target.value);
   } else {
     closeSuggestions();
@@ -257,6 +261,7 @@ const handleSuggestions = (searchValue) => {
 
 const selectLivro = (livroName) => {
   document.querySelector(".searchTerm").value = livroName;
+  document.querySelector(".searchButton").setAttribute("disabled", true);
   searchBook();
   closeSuggestions();
 };
@@ -300,10 +305,10 @@ const buttonHome = () => {
 };
 
 function toggleShopCart() {
-  if (document.querySelector(".listaCompras").style.display == "none") {
-    document.querySelector(".listaCompras").style.display = "flex";
+  if (document.querySelector(".Compras").style.display == "none") {
+    document.querySelector(".Compras").style.display = "flex";
   } else {
-    document.querySelector(".listaCompras").style.display = "none";
+    document.querySelector(".Compras").style.display = "none";
   }
 }
 
@@ -323,6 +328,7 @@ function addToCart(id) {
 }
 
 function updateCart() {
+  document.querySelector("#end").setAttribute("disabled", true);
   renderCartItems();
   renderSubTotal();
 
@@ -337,6 +343,9 @@ function renderSubTotal() {
     totalPrice += item.preco * item.numberOfUnits;
     totalItems += item.numberOfUnits;
   });
+  if (totalPrice > 0) {
+    document.querySelector("#end").removeAttribute("disabled");
+  }
 
   subTotalEl.innerHTML = `<h3>Total: R$ ${totalPrice.toFixed(2)}</h3>`;
 }
@@ -345,7 +354,7 @@ function renderCartItems() {
   cartItemsEl.innerHTML = "";
   listaCompra.forEach((item) => {
     cartItemsEl.innerHTML += `<div class='renderCart'><img src='${item.pictureURL}' width='20px'>
-    <span class='livroSuggestion'>${item.name}</span> 
+    <span class='livroNames'>${item.name}</span> 
     <div id="bookPrice"><p class="preco">R$ ${item.preco}</p></div> 
     <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
     <div class="numberOfUnits">${item.numberOfUnits}</div>
@@ -386,3 +395,19 @@ function endShopping() {
   subTotalEl.innerHTML = `<h3>Total: R$ 0.00</h3>`;
   window.location.reload();
 }
+
+window.onload = function () {
+  updateCart();
+
+  document.querySelector(".searchButton").setAttribute("disabled", true);
+};
+
+let clip = document.querySelector(".vid");
+
+clip.addEventListener("mouseover", function (e) {
+  clip.play();
+});
+
+clip.addEventListener("mouseout", function (e) {
+  clip.pause();
+});
