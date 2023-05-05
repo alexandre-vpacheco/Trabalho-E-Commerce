@@ -13,11 +13,7 @@
 <body>
     <div id="container">
         <header>
-            <div class="headerTop">
-                <p> Compra 100% segura!!!</p>
-                <p> Pagamente disponível via PIX !!!</p>
-                <P> Em até 12x sem juros no cartão !!!</P>
-            </div>
+
             <div class="banner">
                 <div class="titulo">
                     <h1>Palavra Magica</h1>
@@ -27,15 +23,22 @@
                     <input type="submit" class="searchButton" value="Procurar">
                     <div id="sugestoes" hidden></div>
                 </div>
-                <div class="carrinho"> <button onclick="toggleShopCart()"> <img class="carrinhoImagem"
+                <div class="carrinho"> <button onclick="toggleShopCart()" class="carrinhoButton"> <img
+                            class="carrinhoImagem"
                             src="inputs/png-transparent-shopping-cart-graphy-shopping-cart-furniture-rectangle-supermarket.png"
                             width="50px">
                     </button>
+
                     <div class="listaCompras" hidden>
 
                     </div>
-                    <div class="shopping">
-                        <h3>Total: R$</h3>
+                    <div class="shoppingAll">
+                        <div class="shopping">
+                            <h3>Total: R$</h3>
+                        </div>
+                        <div class="endShopping">
+                            <button id="end" onclick="endShopping()">Finalizar Compra</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,7 +52,7 @@
             </div>
         </header>
         <main>
-            <div class="titleImage">
+            <div class="backGround">
                 <h1 class="siteTitle"> PALAVRA MAGICA</h1>
                 <!-- <img src="/inputs/ea7b101831f1e760a021b21d94c6c990.png"> -->
                 <samp>"Onde seus desejos se tornam realidade"</samp>

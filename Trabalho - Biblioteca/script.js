@@ -3,15 +3,16 @@ const subTotalEl = document.querySelector(".shopping");
 let listaCompra = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 
-var livrosTerror = [
+var livros = [
   {
     id: 1,
-    name: "Livro",
+    name: "Terror na orla dos caranguejos.",
     sumario:
-      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu bu bu bu",
+      "São dias frios na Orla dos Crangueijos. Após o surgimento de uma frente fria sem explicação na cidade tropical, e uma onda de assassinatos, moradores e forças policiais se mobilizam para resolver os mistérios.",
     preco: 22.9,
-    pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    pictureURL: "/inputs/terrorNaOrlaDosCaranguejos.png",
+    href: "http://127.0.0.1:5500/inputs/terrorNaOrlaDosCaranguejos.png",
+    categoria: "terror",
   },
   {
     id: 2,
@@ -21,6 +22,8 @@ var livrosTerror = [
     preco: 22.9,
     pictureURL:
       "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "terror",
   },
   {
     id: 3,
@@ -30,6 +33,8 @@ var livrosTerror = [
     preco: 22.9,
     pictureURL:
       "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "terror",
   },
   {
     id: 4,
@@ -39,6 +44,8 @@ var livrosTerror = [
     preco: 22.9,
     pictureURL:
       "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "terror",
   },
   {
     id: 5,
@@ -48,6 +55,8 @@ var livrosTerror = [
     preco: 22.9,
     pictureURL:
       "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "terror",
   },
   {
     id: 6,
@@ -57,19 +66,20 @@ var livrosTerror = [
     preco: 22.9,
     pictureURL:
       "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "terror",
   },
-
-  (livrosAcao = [
-    {
-      id: 7,
-      name: "Livro",
-      sumario:
-        "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu bu bu bu",
-      preco: 22.9,
-      pictureURL:
-        "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    },
-  ]),
+  {
+    id: 7,
+    name: "Livro jesus",
+    sumario:
+      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu bu bu bu",
+    preco: 22.9,
+    pictureURL:
+      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+    categoria: "acao",
+  },
 ];
 
 document.querySelector(".searchButton").addEventListener("click", (e) => {
@@ -79,32 +89,146 @@ document.querySelector(".searchButton").addEventListener("click", (e) => {
 
 document.querySelector("#terror").addEventListener("click", (e) => {
   e.preventDefault();
+  enableButtons();
   document.querySelector("#terror").setAttribute("disabled", true);
-  document.querySelector("#home").removeAttribute("disabled");
   buttonTerror();
+});
+
+document.querySelector("#acao").addEventListener("click", (e) => {
+  e.preventDefault();
+  enableButtons();
+  document.querySelector("#acao").setAttribute("disabled", true);
+  buttonAcao();
+});
+
+document.querySelector("#manga").addEventListener("click", (e) => {
+  e.preventDefault();
+  enableButtons();
+  document.querySelector("#manga").setAttribute("disabled", true);
+  buttonManga();
+});
+
+document.querySelector("#fantasia").addEventListener("click", (e) => {
+  e.preventDefault();
+  enableButtons();
+  document.querySelector("#fantasia").setAttribute("disabled", true);
+  buttonFantasia();
+});
+
+document.querySelector("#romance").addEventListener("click", (e) => {
+  e.preventDefault();
+  enableButtons();
+  document.querySelector("#romance").setAttribute("disabled", true);
+  buttonRomance();
 });
 
 document.querySelector("#home").addEventListener("click", (e) => {
   e.preventDefault();
+  enableButtons();
   document.querySelector("#home").setAttribute("disabled", true);
-  document.querySelector("#terror").removeAttribute("disabled");
   buttonHome();
 });
+
+const enableButtons = () => {
+  document.querySelector("#home").removeAttribute("disabled");
+  document.querySelector("#terror").removeAttribute("disabled");
+  document.querySelector("#manga").removeAttribute("disabled");
+  document.querySelector("#romance").removeAttribute("disabled");
+  document.querySelector("#fantasia").removeAttribute("disabled");
+  document.querySelector("#acao").removeAttribute("disabled");
+};
 
 const buttonTerror = () => {
   var htmlString = "";
 
-  document.querySelector("body").classList.toggle("terror");
-
-  livrosTerror.forEach((livro) => {
+  var terrorAba = livros.filter((livro) => livro.categoria == "terror");
+  terrorAba.forEach((livro) => {
     htmlString += `<div class="livro">
-      <div id="imagemLivro"><img src="${livro.pictureURL}"></div>
-      <div id="bookName"><h2 class="name">${livro.name}</h2></div>
-      <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
-      <div id="resume"><span class="sumario">${livro.sumario}</span></div>
-      <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
+    <div id="imagemLivro"> <a href="${livro.href}" target="_blank"> <img src="${livro.pictureURL}"></div></a>
+    <div id="bookName"><h2 class="name">${livro.name}</h2></div>
+    <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
+    <div id="resume"><span class="sumario">${livro.sumario}</span></div>
+    <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
     </div>`;
   });
+
+  document.querySelector("main").className = "terror";
+
+  document.querySelector(".livros").innerHTML = htmlString;
+};
+
+const buttonAcao = () => {
+  var htmlString = "";
+
+  var acaoAba = livros.filter((livro) => livro.categoria == "acao");
+  acaoAba.forEach((livro) => {
+    htmlString += `<div class="livro">
+    <div id="imagemLivro"> <a href="${livro.href}" target="_blank"> <img src="${livro.pictureURL}"></div></a>
+    <div id="bookName"><h2 class="name">${livro.name}</h2></div>
+    <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
+    <div id="resume"><span class="sumario">${livro.sumario}</span></div>
+    <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
+    </div>`;
+  });
+
+  document.querySelector("main").className = "acao";
+
+  document.querySelector(".livros").innerHTML = htmlString;
+};
+
+const buttonManga = () => {
+  var htmlString = "";
+
+  var mangaAba = livros.filter((livro) => livro.categoria == "manga");
+  mangaAba.forEach((livro) => {
+    htmlString += `<div class="livro">
+    <div id="imagemLivro"> <a href="${livro.href}" target="_blank"> <img src="${livro.pictureURL}"></div></a>
+    <div id="bookName"><h2 class="name">${livro.name}</h2></div>
+    <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
+    <div id="resume"><span class="sumario">${livro.sumario}</span></div>
+    <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
+    </div>`;
+  });
+
+  document.querySelector("main").className = "manga";
+
+  document.querySelector(".livros").innerHTML = htmlString;
+};
+
+const buttonFantasia = () => {
+  var htmlString = "";
+
+  var fantasiaAba = livros.filter((livro) => livro.categoria == "fantasia");
+  fantasiaAba.forEach((livro) => {
+    htmlString += `<div class="livro">
+    <div id="imagemLivro"> <a href="${livro.href}" target="_blank"> <img src="${livro.pictureURL}"></div></a>
+    <div id="bookName"><h2 class="name">${livro.name}</h2></div>
+    <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
+    <div id="resume"><span class="sumario">${livro.sumario}</span></div>
+    <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
+    </div>`;
+  });
+
+  document.querySelector("main").className = "fantasia";
+
+  document.querySelector(".livros").innerHTML = htmlString;
+};
+
+const buttonRomance = () => {
+  var htmlString = "";
+
+  var romanceAba = livros.filter((livro) => livro.categoria == "romance");
+  romanceAba.forEach((livro) => {
+    htmlString += `<div class="livro">
+    <div id="imagemLivro"> <a href="${livro.href}" target="_blank"> <img src="${livro.pictureURL}"></div></a>
+    <div id="bookName"><h2 class="name">${livro.name}</h2></div>
+    <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
+    <div id="resume"><span class="sumario">${livro.sumario}</span></div>
+    <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
+    </div>`;
+  });
+
+  document.querySelector("main").className = "romance";
 
   document.querySelector(".livros").innerHTML = htmlString;
 };
@@ -118,12 +242,12 @@ document.querySelector(".searchTerm").addEventListener("input", (e) => {
 });
 
 const handleSuggestions = (searchValue) => {
-  const filteredbooks = livrosTerror.filter((livro) =>
+  const filteredbooks = livros.filter((livro) =>
     livro.name.toLowerCase().includes(searchValue.toLowerCase())
   );
   var htmlString = "";
   filteredbooks.forEach((livro) => {
-    htmlString += ` <div class='preview'><img src='${livro.pictureURL}' onclick="selectLivro('${livro.name}')" width='20px'>
+    htmlString += ` <div class='preview'><img src='${livro.pictureURL}' onclick="selectLivro('${livro.name}')" width='100px'>
     <span class='livroSuggestion' onclick="selectLivro('${livro.name}')">${livro.name}</span> </div>`;
   });
 
@@ -144,7 +268,7 @@ const closeSuggestions = () => {
 const searchBook = () => {
   var htmlString = "";
   const searchValue = document.querySelector(".searchTerm").value;
-  const filteredBooks = livrosTerror.filter((livro) =>
+  const filteredBooks = livros.filter((livro) =>
     livro.name.toLowerCase().includes(searchValue.toLowerCase())
   );
 
@@ -156,7 +280,7 @@ const searchBook = () => {
       <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
       <div id="resume"><span class="sumario">${livro.sumario}</span></div>
       <div id="shopButton"><button class="shop" onclick="addToCart(${livro.id})">Comprar</button></div>
-    </div>`;
+      </div>`;
     });
   } else {
     htmlString = "<span> Nenhum livro encontrado 😒</span>";
@@ -170,7 +294,7 @@ const searchBook = () => {
 const buttonHome = () => {
   var htmlString = "";
 
-  document.querySelector("body").classList.remove("terror");
+  document.querySelector("main").className = "home";
 
   document.querySelector(".livros").innerHTML = htmlString;
 };
@@ -187,7 +311,7 @@ function addToCart(id) {
   if (listaCompra.some((item) => item.id === id)) {
     changeNumberOfUnits("plus", id);
   } else {
-    const item = livrosTerror.find((livro) => livro.id === id);
+    const item = livros.find((livro) => livro.id === id);
 
     listaCompra.push({
       ...item,
@@ -254,4 +378,11 @@ function changeNumberOfUnits(action, id) {
   });
 
   updateCart();
+}
+
+function endShopping() {
+  localStorage.clear();
+  alert("Compra finalizada com Sucesso");
+  subTotalEl.innerHTML = `<h3>Total: R$ 0.00</h3>`;
+  window.location.reload();
 }
