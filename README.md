@@ -1,6 +1,6 @@
 # Trabalho-E-Commerce
 
-<div align="center"> TRABALHO POO - SISTEMA BANCÁRIO.
+<div align="center"> TRABALHO FrontEnd - LIVRARIA.
 
 <div align="center">
 
