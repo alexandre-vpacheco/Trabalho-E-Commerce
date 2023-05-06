@@ -83,12 +83,12 @@ var livros = [
   },
   {
     id: 8,
-    name: "Dragao negro albino",
+    name: "O Dragao negro albino",
     sumario:
       "Fumaça é um dragão negro albino com a habilidade de cuspir fogo negro durante o dia e raio azul à noite. Ele é o protetor de uma pequena vila de aldeões bondosos que o acolheram e protegeram.",
     preco: 199.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/dragna.png",
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "fantasia",
   },
@@ -99,7 +99,7 @@ var livros = [
       "Eryndor, um jovem fascinado pela magia, é treinado por um feiticeiro mal e descobre seus verdadeiros planos. Depois de anos isolado, ele retorna para enfrentar seu antigo mentor e proteger a floresta onde cresceu.",
     preco: 99.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/eryndor.png",
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "fantasia",
   },
@@ -111,7 +111,7 @@ var livros = [
       
     preco: 59.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/meldoria.png",
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "fantasia",
   },
@@ -123,7 +123,7 @@ var livros = [
       
     preco: 49.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/jinocencia.png",
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "fantasia",
   },
@@ -135,7 +135,7 @@ var livros = [
       
     preco: 29.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/alanavent.png",
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "fantasia",
   },
@@ -145,9 +145,9 @@ var livros = [
     sumario:
       "Em um mundo dividido em duas nações, fogo e água, o nascido de um manipulador do fogo e uma manipuladora de água, Kira. O fruto de uma união proibida, treinado pelo poderoso macaco e seus pais.",
       
-    preco: 99.9,
+    preco:  99.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
+      "/inputs/filhodau.png",
     href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
     categoria: "fantasia",
   },
