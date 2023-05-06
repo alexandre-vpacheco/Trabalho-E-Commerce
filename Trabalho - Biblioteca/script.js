@@ -5,70 +5,69 @@ updateCart();
 
 var livros = [
   {
-    id: 1,
-    name: "Terror na orla dos caranguejos.",
+    id: 26,
+    name: "CATastrofe",
     sumario:
-      "São dias frios na Orla dos Crangueijos. Após o surgimento de uma frente fria sem explicação na cidade tropical, e uma onda de assassinatos, moradores e forças policiais se mobilizam para resolver os mistérios.",
+      "De Takaruna Kombi, um slice of life que conta sobre o sumiço de um gato no prédio, seus moradores até então desconhecidos começam a compartilhar suas vidas e histórias que mostram que estão ligados a eles e ao gato a mais tempo do que imaginavam.",
     preco: 22.9,
-    pictureURL: "/inputs/terrorNaOrlaDosCaranguejos.png",
-    href: "http://127.0.0.1:5500/inputs/terrorNaOrlaDosCaranguejos.png",
-    categoria: "terror",
-    pdf: "/inputs/terror.txt",
+    pictureURL: "/inputs/m1.png",
+    href: "http://127.0.0.1:5500/m1.png",
+    categoria: "manga",
   },
   {
-    id: 2,
-    name: "Livro muito assustador demais",
+    id: 27,
+    name: "KenSham'a Way",
     sumario:
-      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
+      "De Takama Dera Nelle, conta a história de Himura Ken, um contador de histórias nato que sempre chega atrasado no trabalho e revela os detalhes sobre o inicio de seu dia para seu chefe. Monstros, Guerras e velhinhas atravessando a rua, tudo pode ser uma nova forma gambelar seu chefe.",
     preco: 22.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    categoria: "terror",
+      "/inputs/m5.png",
+    href: "http://127.0.0.1:5500/inputs/m5.png",
+    categoria: "manga",
   },
   {
-    id: 3,
-    name: "Livro muito assustador maior que tudo",
+    id: 28,
+    name: "Sora no Boken no hakai Kagaminokuninoarisu",
     sumario:
-      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
+      "De sotapan noz, uma trama shounem pra ninguém botar defeito,  a doce Akisa Harino ao olhar através de uma janela encontra asika onirah, alguém idêntica a ela em aparência porem possui uma aura perversa, ambas gritam ao se verem surgindo duas auras, um lobo e um dragão, com a realidade destruída elas precisam se unir para descobrir como isso aconteceu.",
     preco: 22.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    categoria: "terror",
+      "/inputs/m4.png",
+    href: "http://127.0.0.1:5500/inputs/m4.png",
+    categoria: "manga",
   },
   {
-    id: 4,
-    name: "Livro muito assustador cacete",
+    id: 29,
+    name: "Muteless",
     sumario:
-      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
+      "De Vitor Willlian Geraldo, &quot;o mundo mudou quando o som acabou&quot; , foram as palavras do meu avô tempos antes de partir. após alguns anos invadi o seu sótão e dentro dele havia alguns equipamentos que nunca vi. eles despertaram algo bem maior que sentimentos, descobri a musica, uma força que entrava na minha alma desbloqueando um potencial que o mundo tentou calar. Com o poder da voz de Osíris pude dizer minha primeira palavra. esse é o começo da minha história e não está nem um pouco longe de acabar.",
     preco: 22.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    categoria: "terror",
+      "/inputs/m3.png",
+    href: "http://127.0.0.1:5500/inputs/m3.png",
+    categoria: "manga",
   },
   {
-    id: 5,
-    name: "Livro muito assustador limão azedo",
+    id: 30,
+    name: "I love you, drawer",
     sumario:
-      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
+      "De Irato Lovin, conta a historia de um mangaká que ama seus desenhos por mais que não tenham feito sucesso, no meio de uma tarde de trabalho quando seu primeiro one shot ia ser publicado por uma grande empresa percebe que seus desenhos tem mudado de lugar e até sumido de lá! até que se revelando, eles mesmos começam a mostrar maneiras para de se tornar o melhor mangaká do Japão da sua era.",
     preco: 22.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    categoria: "terror",
+      "/inputs/m2.png",
+    href: "http://127.0.0.1:5500/inputs/m2.png",
+    categoria: "manga",
   },
   {
-    id: 6,
-    name: "Livro muito assustador chico",
+    id: 31,
+    name: "Another Level",
     sumario:
-      "Esse livro conta a historia de algo muito assustador que da medo demais aaaaa bu",
+      "De Yuri Weilemann, a poucos dias de seu casamento um notável mestre dos códigos recebe a missão de treinar um grupo de iniciantes nas artes práticas, com a agenda cheia e muita confusão mental ele usa seu recurso final, uma inteligência artificial que copia e cria clones virtuais dele, assim resolvendo seus problemas. tudo dá errado quando os próprios clones ganham consciência e encontram formas de dominar o mundo através dos seus conhecimentos, agora cabe ao próprio e seu grupo enfrentar os poderosos seres denominados YuriGPT contra o terrível declínio da terra.",
     preco: 22.9,
     pictureURL:
-      "/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    href: "http://127.0.0.1:5500/inputs/png-transparent-computer-icons-book-symbol-book-now-button-angle-rectangle-libra.png",
-    categoria: "terror",
+      "/inputs/m6.png",
+    href: "http://127.0.0.1:5500/inputs/m6.png",
+    categoria: "manga",
   },
   {
     id: 7,
