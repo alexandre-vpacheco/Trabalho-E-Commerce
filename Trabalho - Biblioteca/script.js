@@ -210,7 +210,7 @@ var livros = [
     title: "Muteless",
     href: "16",
     categoria: "manga",
-    audio: "/inputs/",
+    audio: "/inputs/Muteless.mp3",
   },
   {
     id: 17,
@@ -223,7 +223,7 @@ var livros = [
     title: "I love you, drawer",
     href: "17",
     categoria: "manga",
-    audio: "/inputs/",
+    audio: "/inputs/ILoveYouDrawer.mp3",
   },
   {
     id: 18,
@@ -236,7 +236,7 @@ var livros = [
     title: "Another Level",
     href: "18",
     categoria: "manga",
-    audio: "/inputs/",
+    audio: "/inputs/AnotherLevel.mp3",
   },
   {
     name: "Aquele belo par de olhos",
