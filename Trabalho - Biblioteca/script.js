@@ -683,9 +683,10 @@ const searchBook = () => {
   );
 
   if (filteredBooks.length > 0) {
-    filteredBooks.forEach((livro) => {
+    filteredBooks.forEach((livro, i) => {
       htmlString += `<div class="livro">
-      <div id="imagemLivro"><img src="${livro.pictureURL}"></div>
+      <div id="imagemLivro${i}"> <audio id="${livro.href}" src="${livro.audio}"></audio>
+     <a onclick="playAudio(${i})" href="#"> <img src="${livro.pictureURL}" alt="${livro.alt}" title="${livro.title}"></a></div>
       <div id="bookName"><h2 class="name">${livro.name}</h2></div>
       <div id="bookPrice"><p class="preco">R$ ${livro.preco}</p></div>
       <div id="resume"><span class="sumario">${livro.sumario}</span></div>
