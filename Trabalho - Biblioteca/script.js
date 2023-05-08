@@ -695,7 +695,7 @@ const searchBook = () => {
     });
   } else {
     htmlString = `<div class="livro">
-    <div id="imagemLivro"><img src=""></div>
+    <div id="imagemLivro"><img src="/inputs/secret.png"></div>
     <div id="bookName"><h2 class="name">PAlAVRA MAGICA</h2></div>
     <div id="bookPrice"><p class="preco">R$ SEM!!</p></div>
     <div id="resume"><span class="sumario"> A verdadeira palavra magica são os amigos que fizemos no caminho: Romulo Andriolo, Alexandre Pacheco, Vitor Willian, Tamirys Duarte, Ronaldo Aglio e Yago Romero.</span></div>
