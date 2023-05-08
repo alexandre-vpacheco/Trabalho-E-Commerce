@@ -17,7 +17,11 @@
             <div class="banner">
                 <div class="titulo">
                     <div class="titleImage">
+<<<<<<< Updated upstream
                         <img src="/inputs/Palavra.png">
+=======
+                        <img src="/inputs/PalavraMagica.png" title="Palavra Magica" alt="Palavra Magica">  
+>>>>>>> Stashed changes
                     </div>
                     <div class="menuNaive">
                         <div class="menu-line"></div>
@@ -25,11 +29,16 @@
                         <div class="menu-line"></div>
                     </div>
                 </div>
+                <!--cria uma classe de procura, o primeiro input diz onde o usuário vai digitar o termo que procura-->
+                <!--Quando o botão de pesquisa é clicado, ele envia uma solicitação de pesquisa que retorna resultados relevantes para a consulta-->
+                <!--Há o último div que oculta o elemento div adicional que pode conter sugestões de pesquisa-->
                 <div class="search">
                     <input type="text" class="searchTerm" placeholder="O que tu ta procurando?" autocomplete="off">
                     <input type="submit" class="searchButton" value="Procurar">
                     <div id="sugestoes" hidden></div>
                 </div>
+                <!--Cria um carrinho de compras que exibe a lista de compras, com opçào de finalizar-->
+                <!--Primeiro div - toggleShopCar é responsável por exibir e ocultar a compra-->
                 <div class="carrinho"> <button onclick="toggleShopCart()" class="carrinhoButton"> <img
                             class="carrinhoImagem"
                             src="inputs/png-transparent-shopping-cart-graphy-shopping-cart-furniture-rectangle-supermarket.png"
@@ -54,6 +63,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< Updated upstream
             <div class="headerBotton">
                 <button id="home" class="button">Principal</button>
                 <button id="terror" class="button">Terror</button>
@@ -61,6 +71,24 @@
                 <button id="manga" class="button">Manga</button>
                 <button id="romance" class="button">Romance</button>
                 <button id="fantasia" class="button">Fantasia</button>
+=======
+            <!--Cria o background com os botões de cada categoria. Cada botão tem uma imagem.-->
+            <div class="buttonBackground">
+                <div class="headerBotton">
+                    <button id="home" class="button"> <img class="homeBtn" src="/inputs/principal_p.png"
+                            title="Principal" alt="Principal"></button>
+                    <button id="terror" class="button"> <img class="terrorBtn" src="/inputs/principal_t.png"
+                            title="Terror" all="Terror"></button>
+                    <button id="acao" class="button"> <img class="acaoBtn" src="/inputs/principal_a.png" title="Ação"
+                            alt="Ação"></button>
+                    <button id="manga" class="button"> <img class="mangaBtn" src="/inputs/principal_m.png" title="Manga"
+                            alt="Manga"></button>
+                    <button id="romance" class="button"> <img class="romanceBtn" src="/inputs/principal_r.png"
+                            title="Romance" alt="Romance"></button>
+                    <button id="fantasia" class="button"> <img class="fantasiaBtn" src="/inputs/principal_f.png"
+                            title="Fantasia" alt="Fantasia"></button>
+                </div>
+>>>>>>> Stashed changes
             </div>
         </header>
         <main>
